@@ -194,7 +194,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(35, 37, 44, 0.97);
+    background-color: rgba(35, 37, 44, 0.95);
     z-index: 1;
     height: 643px;
 }
@@ -209,9 +209,22 @@ header {
     color: white;
 }
 
-.overlay-text > h1 {
+.overlay-text > a{
     text-decoration: underline;
     font-family: "Roboto Condensed";
+    color: white;
+}
+
+.overlay-text > a > h1:before {
+    content: "🔗";
+    display: inline-block;
+    font-size:30px;
+    width: 40px;
+    height: 33px;
+}
+
+.overlay-text > a:hover {
+    color: #ffb7c5;
 }
 
 .overlay-text > p {
@@ -351,6 +364,7 @@ p::selection {
     background-image: url("./resources/spotify-icon.png");
     background-size: cover;
     vertical-align: text-top;
+    border-radius: 10%;
 }
 
 /* A bit repetitive but overwrite for ::after icons */
